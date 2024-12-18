@@ -1,0 +1,80 @@
+.intro {
+  background-color: #f5f5f5;
+
+  &__slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-block: 51px 94px;
+  }
+
+  &__slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__slide {
+    display: flex;
+    width: 100%;
+    gap: 36px;
+  }
+
+  &__slide img {
+    height: 592px;
+    object-fit: cover;
+  }
+
+  .image1 {
+    width: 919px;
+  }
+
+  .image2 {
+    width: 1000px;
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .dot.active {
+      background-color: white;
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  #slide1:checked ~ .intro__slider .intro__slides {
+    transform: translateX(0);
+  }
+
+  #slide2:checked ~ .intro__slider .intro__slides {
+    transform: translateX(-100%);
+  }
+
+  #slide3:checked ~ .intro__slider .intro__slides {
+    transform: translateX(-200%);
+  }
+
+  .intro__pagination .dot {
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="radio"]:checked + .intro__pagination .dot {
+    background-color: white;
+  }
+}

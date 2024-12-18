@@ -1,0 +1,12 @@
+.page {
+  font-family: Dupla, sans-serif;
+  background-color: $main-page-color;
+  color: $main-text-color;
+
+  scroll-behavior: smooth;
+
+  &__body {
+    margin: 0;
+    min-width: 320px;
+  }
+}

@@ -1,0 +1,141 @@
+.fresh-recipes {
+  padding-block: 0 44px;
+  background-color: #f8f8f8;
+
+  &__switcher {
+    margin-bottom: 20px;
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  &__title {
+    font-family: Dupla;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: center;
+    color: $main-text-color;
+    margin-bottom: 16px;
+
+    span {
+      font-family: Dupla;
+      font-size: 40px;
+      font-style: italic;
+      font-weight: 600;
+      line-height: 60px;
+      text-align: center;
+      color: $separate-color;
+    }
+  }
+
+  &__nav-item {
+    width: 50%;
+    text-align: center;
+
+    &.disabled {
+      background-color: #f0f0f0;
+      pointer-events: none;
+    }
+  }
+
+  &__nav-link {
+    font-family: Dupla, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: center;
+    color: $main-text-color;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $input-placeholder;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 42px;
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 472px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 315px;
+    object-fit: cover;
+  }
+
+  &__details {
+    padding: 29px 46px 28px 44px;
+  }
+
+  &__name {
+    font-family: Dupla;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    text-transform: uppercase;
+    color: $main-text-color;
+    margin-bottom: 2px;
+  }
+
+  &__btn-more {
+    font-family: Dupla;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+
+    color: $separate-color;
+  }
+
+  &__description-top {
+    font-family: Dupla;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+
+    color: $main-text-color;
+  }
+
+  &__description {
+    font-family: Dupla;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    margin-block: 10px 22px;
+
+    color: $main-text-color;
+  }
+}
